@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The woman I became after everything fell apart — Shera Ritfeld</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream:      #F6F1EA;
+      --cream-dark: #EDE5D8;
+      --dark:       #1C1B18;
+      --accent:     #C49A6C;
+      --blush:      #EDE0D4;
+      --text:       #2E2D2A;
+      --text-light: #888480;
+      --border:     #E4DAD0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--cream);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 60px;
+      border-bottom: 1px solid var(--border);
+      background-color: var(--cream);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* POST HEADER */
+    .post-header {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 70px 24px 48px;
+      text-align: center;
+    }
+
+    .post-category {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .post-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .post-meta {
+      font-size: 13px;
+      color: var(--text-light);
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    /* POST IMAGE */
+    .post-image {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      padding: 0 24px;
+      aspect-ratio: 16/9;
+      background-color: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .post-image-monogram {
+      font-family: 'Playfair Display', serif;
+      font-size: 100px;
+      color: var(--cream-dark);
+    }
+
+    /* POST BODY */
+    .post-body {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .post-body p {
+      margin-bottom: 24px;
+      font-size: 17px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    .post-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--dark);
+      margin: 48px 0 20px;
+      line-height: 1.3;
+    }
+
+    .post-body blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 4px 0 4px 28px;
+      margin: 36px 0;
+    }
+
+    .post-body blockquote p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--dark);
+    }
+
+    /* BACK LINK */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 48px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--dark); }
+    .back-link::before { content: '←'; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .footer-copy { font-size: 12px; color: var(--text-light); }
+
+    @media (max-width: 768px) {
+      nav { padding: 20px 24px; }
+      footer { padding: 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Shera Ritfeld</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../posts.html">Stories</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <div class="post-header">
+      <a href="../index.html" class="back-link">Back to Stories</a>
+      <p class="post-category">Growth</p>
+      <h1 class="post-title">The woman I became after everything fell apart</h1>
+      <div class="post-meta">
+        <span>March 2025</span>
+        <span>·</span>
+        <span>6 min read</span>
+      </div>
+    </div>
+
+    <div class="post-image">
+      <span class="post-image-monogram">S</span>
+    </div>
+
+    <div class="post-body">
+
+      <!-- ✏️ START WRITING YOUR POST BELOW THIS LINE -->
+
+      <p>
+        There's a version of you that only shows up after the storm. She's quieter, sharper, more intentional. This is her story — and maybe yours too.
+      </p>
+
+      <p>
+        I didn't plan to fall apart. No one ever does. But somewhere between the life I thought I was building and the life that was actually meant for me, I hit a wall so hard I couldn't pretend it wasn't there anymore.
+      </p>
+
+      <blockquote>
+        <p>The thing about falling apart is that it gives you the rare chance to put yourself back together — this time, on purpose.</p>
+      </blockquote>
+
+      <h2>What the silence taught me</h2>
+
+      <p>
+        When everything stripped away — the plans, the identity I'd constructed, the relationships that no longer fit — what was left was surprisingly quiet. And in that quiet, I started hearing myself for the first time in years.
+      </p>
+
+      <p>
+        I heard what I actually wanted. What I was afraid of. What I'd been pretending didn't matter. It was uncomfortable and clarifying all at once.
+      </p>
+
+      <h2>She shows up differently</h2>
+
+      <p>
+        The woman I am now doesn't hustle out of fear. She moves with intention. She says no more often, and means it. She asks for what she needs. She takes up space without apologising for it.
+      </p>
+
+      <p>
+        Maybe you're in the middle of your storm right now. Maybe you're on the other side of it, wondering who you are without the chaos. Either way — she's in there. The version of you that the storm is making room for.
+      </p>
+
+      <p>
+        She's worth waiting for.
+      </p>
+
+      <!-- ✏️ END OF POST CONTENT -->
+
+    </div>
+  </article>
+
+  <footer>
+    <div class="footer-logo">Shera Ritfeld</div>
+    <p class="footer-copy">© 2025 Shera Ritfeld. Made with intention.</p>
+  </footer>
+
+</body>
+</html>
