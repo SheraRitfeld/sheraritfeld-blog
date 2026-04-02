@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ✏️ STAP 1: Verander de titel hieronder naar jouw post titel -->
+  <title>JOUW POST TITEL — Sheraritfeld</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #F6F1EA; --cream-dark: #EDE5D8; --dark: #1C1B18;
+      --accent: #C49A6C; --blush: #EDE0D4; --text: #2E2D2A;
+      --text-light: #888480; --border: #E4DAD0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--cream); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.7; }
+    a { text-decoration: none; color: inherit; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 28px 60px; border-bottom: 1px solid var(--border); background-color: var(--cream); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; color: var(--dark); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .post-header { max-width: 760px; margin: 0 auto; padding: 70px 24px 48px; text-align: center; }
+    .post-category { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+    .post-title { font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 52px); font-weight: 700; line-height: 1.15; color: var(--dark); margin-bottom: 24px; }
+    .post-meta { font-size: 13px; color: var(--text-light); display: flex; justify-content: center; gap: 16px; }
+    .post-image { max-width: 900px; margin: 0 auto 60px; padding: 0 24px; aspect-ratio: 16/9; background-color: var(--blush); display: flex; align-items: center; justify-content: center; }
+    .post-image-monogram { font-family: 'Playfair Display', serif; font-size: 100px; color: var(--cream-dark); }
+    .post-body { max-width: 680px; margin: 0 auto; padding: 0 24px 80px; }
+    .post-body p { margin-bottom: 24px; font-size: 17px; line-height: 1.9; color: var(--text); }
+    .post-body h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 600; color: var(--dark); margin: 48px 0 20px; line-height: 1.3; }
+    .post-body blockquote { border-left: 3px solid var(--accent); padding: 4px 0 4px 28px; margin: 36px 0; }
+    .post-body blockquote p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; color: var(--dark); }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 48px; transition: color 0.2s; }
+    .back-link:hover { color: var(--dark); }
+    .back-link::before { content: '←'; }
+    footer { border-top: 1px solid var(--border); padding: 32px 60px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--dark); }
+    .footer-copy { font-size: 12px; color: var(--text-light); }
+    @media (max-width: 768px) { nav { padding: 20px 24px; } footer { padding: 24px; flex-direction: column; gap: 12px; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Sheraritfeld</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../posts.html">Stories</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <div class="post-header">
+      <a href="../posts.html" class="back-link">Back to Stories</a>
+
+      <!-- ✏️ STAP 2: Verander de categorie (kies uit: Business / Love / Friendship / Travel / Growth / Style) -->
+      <p class="post-category">Growth</p>
+
+      <!-- ✏️ STAP 3: Verander de titel van je post -->
+      <h1 class="post-title">Jouw post titel komt hier</h1>
+
+      <!-- ✏️ STAP 4: Verander de datum en leestijd -->
+      <div class="post-meta">
+        <span>April 2025</span>
+        <span>·</span>
+        <span>5 min read</span>
+      </div>
+    </div>
+
+    <!-- Foto placeholder - dit vervangen we later door een echte foto -->
+    <div class="post-image">
+      <span class="post-image-monogram">S</span>
+    </div>
+
+    <div class="post-body">
+
+      <!-- ✏️ STAP 5: Schrijf hier jouw post! -->
+      <!-- Gebruik <p> voor alinea's, <h2> voor tussenkopjes, en <blockquote><p> voor quotes -->
+
+      <p>
+        Hier begint je verhaal. Schrijf gewoon zoals je praat — eerlijk, persoonlijk, jij.
+      </p>
+
+      <p>
+        Nog een alinea. Kopieer deze &lt;p&gt; tag om meer alinea's toe te voegen.
+      </p>
+
+      <blockquote>
+        <p>Een mooie quote of gedachte die je wil uitlichten staat hier.</p>
+      </blockquote>
+
+      <h2>Een tussenkopje</h2>
+
+      <p>
+        Meer tekst na het tussenkopje. Je kunt zoveel alinea's toevoegen als je wil.
+      </p>
+
+      <!-- ✏️ EINDE VAN JE POST -->
+
+    </div>
+  </article>
+
+  <footer>
+    <div class="footer-logo">Sheraritfeld</div>
+    <p class="footer-copy">© 2025 Sheraritfeld. Made with intention.</p>
+  </footer>
+
+</body>
+</html>

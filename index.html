@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sheraritfeld — A Woman's Honest Journal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ===================== COLORS & VARIABLES ===================== */
+    :root {
+      --cream:      #F6F1EA;
+      --cream-dark: #EDE5D8;
+      --dark:       #1C1B18;
+      --accent:     #C49A6C;
+      --blush:      #EDE0D4;
+      --sage:       #D2DDD6;
+      --lavender:   #DAD5E6;
+      --text:       #2E2D2A;
+      --text-light: #888480;
+      --border:     #E4DAD0;
+    }
+
+    /* ===================== RESET & BASE ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ===================== NAVIGATION ===================== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 60px;
+      border-bottom: 1px solid var(--border);
+      background-color: var(--cream);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--dark);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ===================== HERO ===================== */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 80px 60px 70px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(52px, 6vw, 78px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--text-light);
+      max-width: 360px;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--dark);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      background-color: #333;
+      transform: translateY(-1px);
+    }
+
+    /* Hero right side */
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 16px;
+    }
+
+    .hero-image-box {
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 3/4;
+      background-color: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-monogram {
+      font-family: 'Playfair Display', serif;
+      font-size: 80px;
+      font-weight: 400;
+      color: var(--cream-dark);
+    }
+
+    .hero-latest {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 16px 20px;
+      width: 100%;
+      max-width: 340px;
+    }
+
+    .hero-latest-tag {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+
+    .hero-latest-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    /* ===================== CATEGORY FILTER ===================== */
+    .category-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 0 60px;
+      overflow-x: auto;
+    }
+
+    .category-list {
+      display: flex;
+      gap: 0;
+      list-style: none;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .category-list li a {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      padding: 18px 24px;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .category-list li a:hover,
+    .category-list li a.active {
+      color: var(--dark);
+      border-bottom-color: var(--dark);
+    }
+
+    /* ===================== FEATURED SECTION ===================== */
+    .section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 24px;
+    }
+
+    .featured {
+      padding: 70px 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    /* Featured left card */
+    .featured-card {
+      background-color: var(--blush);
+      padding: 44px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 420px;
+    }
+
+    .post-category {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .featured-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+
+    .featured-card-excerpt {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 32px;
+      flex-grow: 1;
+    }
+
+    .read-link {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: gap 0.2s;
+    }
+
+    .read-link::after { content: '→'; }
+    .read-link:hover { gap: 14px; }
+
+    /* Featured right list */
+    .featured-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .featured-list-item {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .featured-list-item:first-child { padding-top: 0; }
+
+    .featured-list-meta {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .featured-list-date {
+      font-size: 11px;
+      color: var(--text-light);
+    }
+
+    .featured-list-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.3;
+      color: var(--dark);
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .featured-list-item:hover .featured-list-title { color: var(--accent); }
+
+    .featured-list-excerpt {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    .featured-list-read {
+      font-size: 11px;
+      color: var(--text-light);
+    }
+
+    /* ===================== LATEST STORIES ===================== */
+    .latest {
+      padding: 70px 60px;
+      background-color: var(--cream-dark);
+    }
+
+    .latest-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .latest-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 8px;
+    }
+
+    .post-card {
+      background-color: var(--cream);
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+
+    .post-card:hover { transform: translateY(-4px); }
+
+    .post-card-image {
+      aspect-ratio: 4/3;
+      background-color: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .post-card-image.sage   { background-color: var(--sage); }
+    .post-card-image.lavender { background-color: var(--lavender); }
+
+    .post-card-monogram {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: rgba(0,0,0,0.08);
+    }
+
+    .post-card-body { padding: 24px; }
+
+    .post-card-category {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .post-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.3;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .post-card-excerpt {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .post-card-meta {
+      font-size: 11px;
+      color: var(--text-light);
+    }
+
+    /* ===================== QUOTE BLOCK ===================== */
+    .quote-block {
+      background-color: var(--dark);
+      padding: 90px 60px;
+      text-align: center;
+    }
+
+    .quote-marks {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: var(--accent);
+      opacity: 0.5;
+      line-height: 0.5;
+      margin-bottom: 32px;
+    }
+
+    .quote-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(20px, 3vw, 28px);
+      color: #F6F1EA;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto 28px;
+    }
+
+    .quote-author {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    /* ===================== ABOUT SECTION ===================== */
+    .about-section {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+      padding: 90px 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .about-image {
+      aspect-ratio: 3/4;
+      background-color: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-image-monogram {
+      font-family: 'Playfair Display', serif;
+      font-size: 80px;
+      color: var(--cream-dark);
+    }
+
+    .about-tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+
+    .about-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .about-text {
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.9;
+      margin-bottom: 36px;
+    }
+
+    /* ===================== FOOTER ===================== */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media (max-width: 900px) {
+      nav { padding: 20px 24px; }
+      .hero { grid-template-columns: 1fr; padding: 48px 24px; }
+      .hero-right { align-items: flex-start; }
+      .hero-image-box { max-width: 100%; }
+      .hero-latest { max-width: 100%; }
+      .category-bar { padding: 0 24px; }
+      .featured { padding: 48px 24px; }
+      .featured-grid { grid-template-columns: 1fr; }
+      .latest { padding: 48px 24px; }
+      .latest-grid { grid-template-columns: 1fr; }
+      .quote-block { padding: 60px 24px; }
+      .about-section { grid-template-columns: 1fr; padding: 48px 24px; gap: 32px; }
+      footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <div class="nav-logo">Sheraritfeld</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="posts.html">Stories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="hero-tag">A Woman's Honest Journal</p>
+      <h1 class="hero-title">
+        Living <em>fully,</em><br>writing<br>honestly.
+      </h1>
+      <p class="hero-subtitle">
+        Stories about business, love, friendship, travel and every messy, beautiful phase in between.
+      </p>
+      <a href="posts.html" class="btn-primary">Read the Blog</a>
+    </div>
+    <div class="hero-right">
+      <div class="hero-image-box">
+        <span class="hero-monogram">S</span>
+      </div>
+      <div class="hero-latest">
+        <p class="hero-latest-tag">Latest Post</p>
+        <p class="hero-latest-title">On becoming her</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORY FILTER ===== -->
+  <div class="category-bar">
+    <ul class="category-list">
+      <li><a href="#" class="active">All</a></li>
+      <li><a href="#">Business</a></li>
+      <li><a href="#">Love</a></li>
+      <li><a href="#">Friendship</a></li>
+      <li><a href="#">Travel</a></li>
+      <li><a href="#">Growth</a></li>
+      <li><a href="#">Style</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== FEATURED STORY ===== -->
+  <section class="featured">
+    <p class="section-label">Featured Story</p>
+    <div class="featured-grid">
+
+      <!-- Big card left -->
+      <a href="posts/becoming-her.html" class="featured-card">
+        <div>
+          <span class="post-category">Growth</span>
+          <h2 class="featured-card-title">The woman I became after everything fell apart</h2>
+          <p class="featured-card-excerpt">
+            There's a version of you that only shows up after the storm. She's quieter, sharper, more intentional. This is her story — and maybe yours too.
+          </p>
+        </div>
+        <span class="read-link">Read Story</span>
+      </a>
+
+      <!-- Smaller posts right -->
+      <div class="featured-list">
+        <a href="posts/building-something.html" class="featured-list-item">
+          <div class="featured-list-meta">
+            <span class="post-category">Business</span>
+            <span class="featured-list-date">March 2025 · 6 min</span>
+          </div>
+          <h3 class="featured-list-title">Building something of your own while the world doubts you</h3>
+          <p class="featured-list-excerpt">What nobody tells you about entrepreneurship and feminine intuition.</p>
+        </a>
+
+        <a href="posts/love-yourself.html" class="featured-list-item">
+          <div class="featured-list-meta">
+            <span class="post-category">Love</span>
+            <span class="featured-list-date">February 2025 · 4 min</span>
+          </div>
+          <h3 class="featured-list-title">On learning to love without losing yourself first</h3>
+          <p class="featured-list-excerpt">The hardest relationship is always the one with yourself.</p>
+        </a>
+
+        <a href="posts/solo-travel.html" class="featured-list-item">
+          <div class="featured-list-meta">
+            <span class="post-category">Travel</span>
+            <span class="featured-list-date">January 2025 · 3 min</span>
+          </div>
+          <h3 class="featured-list-title">Traveling solo taught me what friendship couldn't</h3>
+          <p class="featured-list-excerpt">Why I booked a one-way ticket and never looked back.</p>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== LATEST STORIES ===== -->
+  <section class="latest">
+    <div class="latest-inner">
+      <p class="section-label">Latest Stories</p>
+      <div class="latest-grid">
+
+        <a href="posts/style-identity.html" class="post-card">
+          <div class="post-card-image">
+            <span class="post-card-monogram">S</span>
+          </div>
+          <div class="post-card-body">
+            <p class="post-card-category">Style</p>
+            <h3 class="post-card-title">Dressing for the woman I'm becoming</h3>
+            <p class="post-card-excerpt">Style is never just clothes. It's always identity.</p>
+            <span class="post-card-meta">5 min read</span>
+          </div>
+        </a>
+
+        <a href="posts/friendships.html" class="post-card">
+          <div class="post-card-image sage">
+            <span class="post-card-monogram">S</span>
+          </div>
+          <div class="post-card-body">
+            <p class="post-card-category">Friendship</p>
+            <h3 class="post-card-title">The friendships that survive your transformation</h3>
+            <p class="post-card-excerpt">Not everyone grows with you — and that's okay.</p>
+            <span class="post-card-meta">4 min read</span>
+          </div>
+        </a>
+
+        <a href="posts/first-year.html" class="post-card">
+          <div class="post-card-image lavender">
+            <span class="post-card-monogram">S</span>
+          </div>
+          <div class="post-card-body">
+            <p class="post-card-category">Business</p>
+            <h3 class="post-card-title">What I wish someone had told me before I started</h3>
+            <p class="post-card-excerpt">Hard lessons from the first year of doing it alone.</p>
+            <span class="post-card-meta">7 min read</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUOTE ===== -->
+  <section class="quote-block">
+    <div class="quote-marks">"</div>
+    <p class="quote-text">
+      Every phase of life has a story worth telling. You just have to be brave enough to write it.
+    </p>
+    <p class="quote-author">— Sherari</p>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about-section">
+    <div class="about-image">
+      <span class="about-image-monogram">S</span>
+    </div>
+    <div class="about-content">
+      <p class="about-tag">The Woman Behind the Words</p>
+      <h2 class="about-title">Hi, I'm Sherari —<br>writer, creative,<br>woman in motion.</h2>
+      <p class="about-text">
+        I write about life's real chapters — the messy, the magical and everything in between. Not a highlight reel. The actual journey.
+      </p>
+      <a href="about.html" class="btn-primary">My Story</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-logo">Sheraritfeld</div>
+    <p class="footer-copy">© 2025 Sheraritfeld. Made with intention.</p>
+  </footer>
+
+</body>
+</html>

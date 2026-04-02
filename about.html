@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Sheraritfeld</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #F6F1EA; --cream-dark: #EDE5D8; --dark: #1C1B18;
+      --accent: #C49A6C; --blush: #EDE0D4; --text: #2E2D2A;
+      --text-light: #888480; --border: #E4DAD0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--cream); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.7; }
+    a { text-decoration: none; color: inherit; }
+
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 28px 60px; border-bottom: 1px solid var(--border); background-color: var(--cream); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; color: var(--dark); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+    .about-hero {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 60px;
+    }
+
+    .about-hero-image {
+      aspect-ratio: 3/4;
+      background-color: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-monogram {
+      font-family: 'Playfair Display', serif;
+      font-size: 100px;
+      color: var(--cream-dark);
+    }
+
+    .about-tag {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--text-light); margin-bottom: 20px;
+    }
+
+    .about-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 4vw, 54px);
+      font-weight: 700; line-height: 1.15;
+      color: var(--dark); margin-bottom: 32px;
+    }
+
+    .about-title em { font-style: italic; color: var(--accent); }
+
+    .about-body p {
+      font-size: 16px; color: var(--text-light);
+      line-height: 1.9; margin-bottom: 20px;
+    }
+
+    .about-values {
+      background-color: var(--cream-dark);
+      padding: 80px 60px;
+      text-align: center;
+    }
+
+    .section-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--text-light); margin-bottom: 12px;
+    }
+
+    .values-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 3vw, 38px);
+      font-weight: 600; color: var(--dark);
+      margin-bottom: 48px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .value-item { text-align: left; }
+    .value-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-style: italic;
+      color: var(--accent);
+      opacity: 0.6;
+      margin-bottom: 12px;
+    }
+    .value-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; font-weight: 500;
+      color: var(--dark); margin-bottom: 10px;
+    }
+    .value-text { font-size: 14px; color: var(--text-light); line-height: 1.8; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 60px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--dark); }
+    .footer-copy { font-size: 12px; color: var(--text-light); }
+
+    @media (max-width: 900px) {
+      nav { padding: 20px 24px; }
+      .about-hero { grid-template-columns: 1fr; padding: 48px 24px; gap: 40px; }
+      .about-values { padding: 48px 24px; }
+      .values-grid { grid-template-columns: 1fr; }
+      footer { padding: 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Sheraritfeld</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="posts.html">Stories</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="about-hero">
+    <div class="about-hero-image">
+      <span class="about-monogram">S</span>
+    </div>
+    <div class="about-content">
+      <p class="about-tag">The Woman Behind the Words</p>
+      <!-- ✏️ CHANGE YOUR NAME AND BIO BELOW -->
+      <h1 class="about-title">Hi, I'm Sherari —<br><em>writer, creative,</em><br>woman in motion.</h1>
+      <div class="about-body">
+        <p>
+          I write about life's real chapters — the messy, the magical, and everything in between. Not a highlight reel. The actual journey.
+        </p>
+        <p>
+          I started this blog because I kept looking for stories that felt honest. Stories about building businesses while your hands are shaking. About loving people who are still figuring themselves out. About friendships that end and trips you take alone because you needed to.
+        </p>
+        <p>
+          I couldn't find enough of them — so I decided to write them myself.
+        </p>
+        <p>
+          Welcome to Sheraritfeld. Glad you're here.
+        </p>
+      </div>
+      <!-- ✏️ END OF BIO -->
+    </div>
+  </section>
+
+  <section class="about-values">
+    <p class="section-label">What I write about</p>
+    <h2 class="values-title">Every phase of life has a story.</h2>
+    <div class="values-grid">
+      <div class="value-item">
+        <div class="value-number">01</div>
+        <h3 class="value-title">Business</h3>
+        <p class="value-text">Building things from scratch. The fear, the wins, the lessons they don't teach you in school.</p>
+      </div>
+      <div class="value-item">
+        <div class="value-number">02</div>
+        <h3 class="value-title">Love & Relationships</h3>
+        <p class="value-text">The honest side of loving people — including the relationship with yourself.</p>
+      </div>
+      <div class="value-item">
+        <div class="value-number">03</div>
+        <h3 class="value-title">Growth & Life</h3>
+        <p class="value-text">Becoming who you're meant to be — messily, bravely, one phase at a time.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Sheraritfeld</div>
+    <p class="footer-copy">© 2025 Sheraritfeld. Made with intention.</p>
+  </footer>
+
+</body>
+</html>
