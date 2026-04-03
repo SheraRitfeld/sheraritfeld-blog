@@ -41,18 +41,20 @@
     }
 
     .about-hero-image {
-      aspect-ratio: 3/4;
-      background-color: var(--blush);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
 
-    .about-monogram {
-      font-family: 'Playfair Display', serif;
-      font-size: 100px;
-      color: var(--cream-dark);
-    }
+.about-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+    
 
     .about-tag {
       font-size: 10px; font-weight: 600; letter-spacing: 0.2em;
