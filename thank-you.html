@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank you — Shera Ritfeld</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #F6F1EA; --dark: #1C1B18; --accent: #C49A6C;
+      --text: #2E2D2A; --text-light: #888480; --border: #E4DAD0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--cream); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.7; }
+    a { text-decoration: none; color: inherit; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 28px 60px; border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; color: var(--dark); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); }
+    .nav-links a:hover { color: var(--accent); }
+
+    .thankyou {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 120px 24px;
+      text-align: center;
+    }
+    .thankyou-icon {
+      font-family: 'Playfair Display', serif;
+      font-size: 60px;
+      font-style: italic;
+      color: var(--accent);
+      opacity: 0.6;
+      margin-bottom: 24px;
+    }
+    .thankyou-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .thankyou-text {
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.9;
+      margin-bottom: 40px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--dark);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background-color: #333; }
+    footer { border-top: 1px solid var(--border); padding: 32px 60px; display: flex; justify-content: space-between; align-items: center; margin-top: 80px; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--dark); }
+    .footer-copy { font-size: 12px; color: var(--text-light); }
+    @media (max-width: 768px) { nav { padding: 20px 24px; } footer { padding: 24px; flex-direction: column; gap: 12px; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-logo">Shera Ritfeld</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="posts.html">Stories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="thankyou">
+    <div class="thankyou-icon">"</div>
+    <h1 class="thankyou-title">Thank you for reaching out.</h1>
+    <p class="thankyou-text">
+      I've received your message and will get back to you soon.<br>
+      In the meantime, feel free to explore the stories.
+    </p>
+    <a href="posts.html" class="btn-primary">Read the Stories</a>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Shera Ritfeld</div>
+    <p class="footer-copy">© 2025 Shera Ritfeld. Made with intention.</p>
+  </footer>
+</body>
+</html>

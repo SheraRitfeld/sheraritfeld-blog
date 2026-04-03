@@ -105,7 +105,8 @@
       For collaborations, questions, or just to say hi — I'd love to hear from you.
     </p>
 
-    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/thank-you.html">
+      <input type="hidden" name="form-name" value="contact" />
       <div class="form-group">
         <label class="form-label" for="name">Your Name</label>
         <input class="form-input" type="text" id="name" name="name" placeholder="Jane Doe" required />
