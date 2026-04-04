@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NEJNCF304K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NEJNCF304K');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Shera Ritfeld</title>
@@ -41,20 +32,18 @@
     }
 
     .about-hero-image {
-  width: 100%;
-  max-width: 400px;
-  aspect-ratio: 3/4;
-  overflow: hidden;
-}
+      aspect-ratio: 3/4;
+      background-color: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.about-hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-    
+    .about-monogram {
+      font-family: 'Playfair Display', serif;
+      font-size: 100px;
+      color: var(--cream-dark);
+    }
 
     .about-tag {
       font-size: 10px; font-weight: 600; letter-spacing: 0.2em;
@@ -129,6 +118,30 @@
       footer { padding: 24px; flex-direction: column; gap: 12px; }
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NEJNCF304K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NEJNCF304K');
+  </script>
+  <meta name="description" content="Hi, I'm Shera — creative, writer, woman unfolding. I write about life's real chapters — the messy, the magical, and everything in between." />
+  <meta name="keywords" content="Shera Ritfeld, about, writer, blogger, lifestyle, women" />
+  <meta name="author" content="Shera Ritfeld" />
+  <meta name="robots" content="index, follow" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="About — Shera Ritfeld" />
+  <meta property="og:description" content="Hi, I'm Shera — creative, writer, woman unfolding. I write about life's real chapters — the messy, the magical, and everything in between." />
+  <meta property="og:image" content="https://www.sheraritfeld.com/images/shera-hero.jpg" />
+  <meta property="og:url" content="https://www.sheraritfeld.com/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Shera Ritfeld" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About — Shera Ritfeld" />
+  <meta name="twitter:description" content="Hi, I'm Shera — creative, writer, woman unfolding. I write about life's real chapters — the messy, the magical, and everything in between." />
+  <meta name="twitter:image" content="https://www.sheraritfeld.com/images/shera-hero.jpg" />
 </head>
 <body>
 
@@ -144,7 +157,7 @@
 
   <section class="about-hero">
     <div class="about-hero-image">
-      <img src="images/shera-about.jpg" alt="Shera">
+      <span class="about-monogram">S</span>
     </div>
     <div class="about-content">
       <p class="about-tag">The Woman Behind the Words</p>
