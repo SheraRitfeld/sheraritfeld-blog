@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I didn't start because I was ready. I started because the bills were. — Shera Ritfeld</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream:      #F6F1EA;
+      --cream-dark: #EDE5D8;
+      --dark:       #1C1B18;
+      --accent:     #C49A6C;
+      --blush:      #EDE0D4;
+      --text:       #2E2D2A;
+      --text-light: #888480;
+      --border:     #E4DAD0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--cream);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 60px;
+      border-bottom: 1px solid var(--border);
+      background-color: var(--cream);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* POST HEADER */
+    .post-header {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 70px 24px 48px;
+      text-align: center;
+    }
+
+    .post-category {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .post-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .post-meta {
+      font-size: 13px;
+      color: var(--text-light);
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    /* POST IMAGE */
+    .post-image {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      padding: 0 24px;
+      aspect-ratio: 4/3;
+      background-color: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* POST BODY */
+    .post-body {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .post-body p {
+      margin-bottom: 24px;
+      font-size: 17px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    .post-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--dark);
+      margin: 48px 0 20px;
+      line-height: 1.3;
+    }
+
+    .post-body blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 4px 0 4px 28px;
+      margin: 36px 0;
+    }
+
+    .post-body blockquote p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--dark);
+    }
+
+    /* BACK LINK */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 48px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--dark); }
+    .back-link::before { content: '←'; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .footer-copy { font-size: 12px; color: var(--text-light); }
+
+    @media (max-width: 768px) {
+      nav { padding: 20px 24px; }
+      footer { padding: 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NEJNCF304K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NEJNCF304K');
+  </script>
+  <meta name="description" content="I didn't start because I was ready. I started because the bills were. A personal story about building something real from a broken moment." />
+  <meta name="keywords" content="business, entrepreneurship, starting a business, women in business, Shera Ritfeld, building from scratch" />
+  <meta name="author" content="Shera Ritfeld" />
+  <meta name="robots" content="index, follow" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="I didn't start because I was ready. I started because the bills were. — Shera Ritfeld" />
+  <meta property="og:description" content="A personal story about building something real from a broken moment." />
+  <meta property="og:image" content="https://www.sheraritfeld.com/images/shera-post.jpg" />
+  <meta property="og:url" content="https://www.sheraritfeld.com/posts/something-from-nothing.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Shera Ritfeld" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="I didn't start because I was ready. I started because the bills were. — Shera Ritfeld" />
+  <meta name="twitter:description" content="A personal story about building something real from a broken moment." />
+  <meta name="twitter:image" content="https://www.sheraritfeld.com/images/shera-post.jpg" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Shera Ritfeld</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../posts.html">Stories</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <div class="post-header">
+      <a href="../posts.html" class="back-link">Back to Stories</a>
+      <p class="post-category">Business</p>
+      <h1 class="post-title">I didn't start because I was ready. I started because the bills were.</h1>
+      <div class="post-meta">
+        <span>April 2026</span>
+        <span>·</span>
+        <span>5 min read</span>
+      </div>
+    </div>
+
+    <div class="post-image" style="padding:0;">
+      <img src="../images/shera-post.jpg" alt="Shera Ritfeld" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;" />
+    </div>
+
+    <div class="post-body">
+
+      <p>
+        Before any of this, I was just trying to figure it out. That quiet, everyday pressure of knowing the bills don't care about your timeline. They just show up. So I tried things. Practical things. Things that made sense on paper. I kept moving, kept trying, telling myself something would eventually click.
+      </p>
+
+      <p>
+        It didn't. At least, not yet.
+      </p>
+
+      <p>
+        Then my birthday started getting closer.
+      </p>
+
+      <p>
+        I was turning 26. And this one meant something to me. Really meant something. So I decided that instead of just celebrating, I wanted to give something back to the people I loved. Something made with my own hands. Something personal, thoughtful, detailed.
+      </p>
+
+      <p>
+        So I started creating. Making little personalised things.
+      </p>
+
+      <p>
+        And that's when something unexpected happened.
+      </p>
+
+      <blockquote>
+        <p>Every time I sat down to work on them, the world went quiet. No noise. No stress. No bills, no pressure, no overthinking. Just me, my hands, and whatever I was making.</p>
+      </blockquote>
+
+      <p>
+        Hours would pass and I wouldn't even notice. And that feeling, that calm, peaceful, completely-in-my-element feeling, I hadn't felt that in a long time.
+      </p>
+
+      <h2>Then life did what life does.</h2>
+
+      <p>
+        Even though things were rocky, I still wanted everyone there. I still wanted to show the people around me that they were appreciated. Because I had been through hell that year and somehow still felt grateful. Still wanted to celebrate. Still showed up for others the way I always do.
+      </p>
+
+      <p>
+        You can probably guess what happened.
+      </p>
+
+      <p>
+        Half of those people didn't make it to any of the three days. And my actual birthday? Can y'all believe my dinner actually got cancelled. 3 hours before the reservation. Girls, when a guy messes up your birthday, he hates you. Period.
+      </p>
+
+      <p>
+        I was hurt. I was embarrassed for them, honestly.
+      </p>
+
+      <p>
+        But here's the thing about me: if I want something, I will get it. With or without you. So I went anyway. To that same place. Just without them.
+      </p>
+
+      <p>
+        Just make sure you only stay around people who prioritise you. Not only when it is convenient for them.
+      </p>
+
+      <h2>And then everything shifted.</h2>
+
+      <p>
+        I looked at the things I had been creating. The hours I had spent pouring myself into every detail of every piece. And I thought: wait. I actually love doing this. Not for the celebration. Not for anyone else. Just for the way it made me feel. For the peace it gave me when everything else was loud.
+      </p>
+
+      <p>
+        So I made a decision. Forget it. I'm doing something real with this.
+      </p>
+
+      <h2>What actually drives me.</h2>
+
+      <p>
+        Making it a business was its own decision. I started small, a mix of discounts, some free pieces, just to let people see what I could do. And once they saw it, they understood.
+      </p>
+
+      <p>
+        Because what drives me is not the product. It is the moment someone looks at what I made and it catches them. That detail that makes a day feel like something. When someone holds it and feels that someone truly cared. That is what I put into everything. And every time someone loves it, something in me heals a little. My inner child included.
+      </p>
+
+      <p>
+        Exactly one month after my birthday, on December 21st, I posted for the first time. Under construction. 🚧
+      </p>
+
+      <h2>What I know about starting from a broken moment.</h2>
+
+      <p>
+        It doesn't feel powerful at the time. It feels like redirecting. Taking something that hurt and pointing it somewhere useful. But then you sit down and start making something. And the hours disappear. And you look up and it's 3AM and you're not even tired because you're completely in it. Completely alive.
+      </p>
+
+      <p>
+        That's when I knew this wasn't just something to do.
+      </p>
+
+      <p>
+        This was something I was made to do.
+      </p>
+
+      <p>
+        I will go back and start over, again and again, until it feels right. Not because I have to. Because anything less just isn't me. People call that extra. I call it standards. And when it finally comes together, when I look at the finished product and it's everything I imagined?
+      </p>
+
+      <p>
+        Proud mom. Every single time. 🤍
+      </p>
+
+      <h2>Where I am now.</h2>
+
+      <p>
+        And just so you know, this did not stay easy. Life filled up fast. Other responsibilities, other commitments, a schedule that left little room. But I kept showing up for it anyway. In the margins, in the stolen hours, in between everything else. And somehow those moments became the most intentional thing I have ever done.
+      </p>
+
+      <p>
+        Still building. Still learning. But I have the right people around me now, people who see the vision even when I can't. And for the first time I am allowing myself to dream bigger than I ever thought I was allowed to.
+      </p>
+
+      <p>
+        Not because everything is perfect. But because I finally understand: the things that were meant to break you sometimes just redirect you.
+      </p>
+
+      <p>
+        And honestly? That redirection was the best thing that ever happened to me. 😌
+      </p>
+
+    </div>
+  </article>
+
+  <footer>
+    <div class="footer-logo">Shera Ritfeld</div>
+    <p class="footer-copy">© 2026 Shera Ritfeld. Made with intention.</p>
+  </footer>
+
+</body>
+</html>
