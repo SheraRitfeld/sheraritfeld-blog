@@ -7,34 +7,167 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --cream: #F6F1EA; --cream-dark: #EDE5D8; --dark: #1C1B18;
-      --accent: #C49A6C; --blush: #EDE0D4; --text: #2E2D2A;
-      --text-light: #888480; --border: #E4DAD0;
+      --cream:      #F6F1EA;
+      --cream-dark: #EDE5D8;
+      --dark:       #1C1B18;
+      --accent:     #C49A6C;
+      --blush:      #EDE0D4;
+      --text:       #2E2D2A;
+      --text-light: #888480;
+      --border:     #E4DAD0;
     }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--cream); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; }
+    body {
+      background-color: var(--cream);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
     a { text-decoration: none; color: inherit; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 28px 60px; border-bottom: 1px solid var(--border); background-color: var(--cream); }
-    .nav-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; color: var(--dark); }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 60px;
+      border-bottom: 1px solid var(--border);
+      background-color: var(--cream);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--dark);
+    }
     .nav-links { display: flex; gap: 36px; list-style: none; }
-    .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); transition: color 0.2s; }
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      transition: color 0.2s;
+    }
     .nav-links a:hover { color: var(--accent); }
-    .post-header { max-width: 760px; margin: 0 auto; padding: 70px 24px 48px; text-align: center; }
-    .post-category { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
-    .post-title { font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 52px); font-weight: 700; line-height: 1.15; color: var(--dark); margin-bottom: 24px; }
-    .post-meta { font-size: 13px; color: var(--text-light); display: flex; justify-content: center; gap: 16px; }
-    .post-image { max-width: 900px; margin: 0 auto 60px; aspect-ratio: 4/3; background-color: var(--blush); }
-    .post-body { max-width: 680px; margin: 0 auto; padding: 0 24px 80px; }
-    .post-body p { margin-bottom: 24px; font-size: 17px; line-height: 1.9; color: var(--text); }
-    .post-body h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 600; color: var(--dark); margin: 48px 0 20px; line-height: 1.3; }
-    .post-body blockquote { border-left: 3px solid var(--accent); padding: 4px 0 4px 28px; margin: 36px 0; }
-    .post-body blockquote p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; color: var(--dark); }
-    .back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 48px; transition: color 0.2s; }
+
+    /* POST HEADER */
+    .post-header {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 70px 24px 48px;
+      text-align: center;
+    }
+
+    .post-category {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .post-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .post-meta {
+      font-size: 13px;
+      color: var(--text-light);
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    /* POST IMAGE */
+    .post-image {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      padding: 0 24px;
+      aspect-ratio: 4/3;
+      background-color: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* POST BODY */
+    .post-body {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .post-body p {
+      margin-bottom: 24px;
+      font-size: 17px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    .post-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--dark);
+      margin: 48px 0 20px;
+      line-height: 1.3;
+    }
+
+    .post-body blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 4px 0 4px 28px;
+      margin: 36px 0;
+    }
+
+    .post-body blockquote p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--dark);
+    }
+
+    /* BACK LINK */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 48px;
+      transition: color 0.2s;
+    }
     .back-link:hover { color: var(--dark); }
     .back-link::before { content: '←'; }
-    footer { border-top: 1px solid var(--border); padding: 32px 60px; display: flex; justify-content: space-between; align-items: center; }
-    .footer-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--dark); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--dark);
+    }
     .footer-copy { font-size: 12px; color: var(--text-light); }
+
     @media (max-width: 768px) {
       nav { padding: 20px 24px; }
       footer { padding: 24px; flex-direction: column; gap: 12px; }
@@ -48,20 +181,25 @@
     gtag('js', new Date());
     gtag('config', 'G-NEJNCF304K');
   </script>
-  <meta name="description" content="I didn't start because I was ready. I started because the bills were. A personal story about building something real from a broken moment." />
-  <meta name="keywords" content="business, entrepreneurship, starting a business, women in business, Shera Ritfeld, building from scratch" />
+  <meta name="description" content="How I started a business from nothing after a painful moment. A real story about turning passion into income, building something from scratch, and what it actually feels like to find what you were made to do." />
+  <meta name="keywords" content="how to start a business from nothing, women entrepreneurs, building a business from scratch, turning passion into income, female entrepreneur story, starting a creative business, how I started my business, women in business, Shera Ritfeld" />
   <meta name="author" content="Shera Ritfeld" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="I didn't start because I was ready. I started because the bills were. — Shera Ritfeld" />
-  <meta property="og:description" content="A personal story about building something real from a broken moment." />
-  <meta property="og:image" content="https://www.sheraritfeld.com/images/shera-business2.jpg" />
+  <link rel="canonical" href="https://www.sheraritfeld.com/posts/something-from-nothing.html" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.sheraritfeld.com/posts/something-from-nothing.html" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="I didn't start because I was ready. I started because the bills were. — Shera Ritfeld" />
+  <meta property="og:description" content="How I built something real from a broken moment. A personal story about finding what you were made to do and actually going for it." />
+  <meta property="og:image" content="https://www.sheraritfeld.com/images/shera-business.jpg" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Shera Ritfeld" />
+  <meta property="article:author" content="Shera Ritfeld" />
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="I didn't start because I was ready. I started because the bills were. — Shera Ritfeld" />
-  <meta name="twitter:description" content="A personal story about building something real from a broken moment." />
-  <meta name="twitter:image" content="https://www.sheraritfeld.com/images/shera-business2.jpg" />
+  <meta name="twitter:description" content="How I built something real from a broken moment. A personal story about finding what you were made to do and actually going for it." />
+  <meta name="twitter:image" content="https://www.sheraritfeld.com/images/shera-business.jpg" />
 </head>
 <body>
 
@@ -83,85 +221,171 @@
       <div class="post-meta">
         <span>April 2026</span>
         <span>·</span>
-        <span>5 min read</span>
+        <span>6 min read</span>
       </div>
     </div>
 
     <div class="post-image" style="padding:0;">
-      <img src="../images/shera-business2.jpg" alt="Shera Ritfeld" style="width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block;" />
+      <img src="../images/shera-business.jpg" alt="Shera Ritfeld" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;" />
     </div>
 
     <div class="post-body">
 
-      <p>Before any of this, I was just trying to figure it out. That quiet, everyday pressure of knowing the bills don't care about your timeline. They just show up. So I tried things. Practical things. Things that made sense on paper. I kept moving, kept trying, telling myself something would eventually click.</p>
+      <p>
+        Nobody writes a business plan when they're just trying to survive the week. And that's exactly where this started. Not with a vision board or a strategy session. With pressure. With bills. With that very specific kind of exhaustion that comes from trying things that look good on paper but feel hollow in practice.
+      </p>
 
-      <p>It didn't. At least, not yet.</p>
+      <p>
+        Before any of this, I was just trying to figure it out. That quiet, everyday pressure of knowing the bills don't care about your timeline. They just show up. So I tried things. Practical things. Things that made sense on paper. I kept moving, kept trying, telling myself something would eventually click.
+      </p>
 
-      <p>Then my birthday started getting closer.</p>
+      <p>
+        It didn't. At least, not yet.
+      </p>
 
-      <p>I was turning 26. And this one meant something to me. Really meant something. So I decided that instead of just celebrating, I wanted to give something back to the people I loved. Something made with my own hands. Something personal, thoughtful, detailed.</p>
+      <p>
+        If you've ever Googled "how to make money doing something I actually love" at 2AM, this is for you. I've been in that search. I know how it feels to want to build something real but have no idea where to start.
+      </p>
 
-      <p>So I started creating. Making little personalised things.</p>
+      <p>
+        Then my birthday started getting closer.
+      </p>
 
-      <p>And that's when something unexpected happened.</p>
+      <p>
+        I was turning 26. And this one meant something to me. Really meant something. So I decided that instead of just celebrating, I wanted to give something back to the people I loved. Something made with my own hands. Something personal, thoughtful, detailed.
+      </p>
+
+      <p>
+        So I started creating. Making little personalised things.
+      </p>
+
+      <p>
+        And that's when something unexpected happened.
+      </p>
 
       <blockquote>
         <p>Every time I sat down to work on them, the world went quiet. No noise. No stress. No bills, no pressure, no overthinking. Just me, my hands, and whatever I was making.</p>
       </blockquote>
 
-      <p>Hours would pass and I wouldn't even notice. And that feeling, that calm, peaceful, completely-in-my-element feeling, I hadn't felt that in a long time.</p>
+      <p>
+        Hours would pass and I wouldn't even notice. And that feeling, that calm, peaceful, completely-in-my-element feeling, I hadn't felt that in a long time.
+      </p>
 
       <h2>Then life did what life does.</h2>
 
-      <p>Even though things were rocky, I still wanted everyone there. I still wanted to show the people around me that they were appreciated. Because I had been through hell that year and somehow still felt grateful. Still wanted to celebrate. Still showed up for others the way I always do.</p>
+      <p>
+        Even though things were rocky, I still wanted everyone there. I still wanted to show the people around me that they were appreciated. Because I had been through hell that year and somehow still felt grateful. Still wanted to celebrate. Still showed up for others the way I always do.
+      </p>
 
-      <p>You can probably guess what happened.</p>
+      <p>
+        You can probably guess what happened.
+      </p>
 
-      <p>Half of those people didn't make it to any of the three days. And my actual birthday? Can y'all believe my dinner actually got cancelled. 3 hours before the reservation. Girls, when a guy messes up your birthday, he hates you. Period.</p>
+      <p>
+        Half of those people didn't make it to any of the three days. And my actual birthday? Can y'all believe my dinner actually got cancelled. 3 hours before the reservation. Girls, when a guy messes up your birthday, he hates you. Period.
+      </p>
 
-      <p>I was hurt. I was embarrassed for them, honestly.</p>
+      <p>
+        I was hurt. And I was embarrassed for him.
+      </p>
 
-      <p>But here's the thing about me: if I want something, I will get it. With or without you. So I went anyway. To that same place. Just without them.</p>
+      <p>
+        But here's the thing about me: if I want something, I will get it. With or without you. So I went anyway. To that same place. Just without him.
+      </p>
 
-      <p>Just make sure you only stay around people who prioritise you. Not only when it is convenient for them.</p>
+      <p>
+        Just make sure you only stay around people who prioritise you. Not only when it is convenient for them.
+      </p>
 
       <h2>And then everything shifted.</h2>
 
-      <p>I looked at the things I had been creating. The hours I had spent pouring myself into every detail of every piece. And I thought: wait. I actually love doing this. Not for the celebration. Not for anyone else. Just for the way it made me feel. For the peace it gave me when everything else was loud.</p>
+      <p>
+        I looked at the things I had been creating. The hours I had spent pouring myself into every detail of every piece. And I thought: wait. I actually love doing this. Not for the celebration. Not for anyone else. Just for the way it made me feel. For the peace it gave me when everything else was loud.
+      </p>
 
-      <p>So I made a decision. Forget it. I'm doing something real with this.</p>
+      <p>
+        So I made a decision. Forget it. I'm doing something real with this.
+      </p>
 
       <h2>What actually drives me.</h2>
 
-      <p>Making it a business was its own decision. I started small, a mix of discounts, some free pieces, just to let people see what I could do. And once they saw it, they understood.</p>
+      <p>
+        Making it a business was its own decision. I started small, a mix of discounts, some free pieces, just to let people see what I could do. And once they saw it, they understood.
+      </p>
 
-      <p>Because what drives me is not the product. It is the moment someone looks at what I made and it catches them. That detail that makes a day feel like something. When someone holds it and feels that someone truly cared. That is what I put into everything. And every time someone loves it, something in me heals a little. My inner child included.</p>
+      <p>
+        Because what drives me is not the product. It is the moment someone looks at what I made and it catches them. That detail that makes a day feel like something. When someone holds it and feels that someone truly cared. That is what I put into everything. And every time someone loves it, something in me heals a little. My inner child included.
+      </p>
 
-      <p>Exactly one month after my birthday, on December 21st, I posted for the first time. Under construction. 🚧</p>
+      <p>
+        Exactly one month after my birthday, on December 21st, I posted for the first time. Under construction. 🚧
+      </p>
 
       <h2>What I know about starting from a broken moment.</h2>
 
-      <p>It doesn't feel powerful at the time. It feels like redirecting. Taking something that hurt and pointing it somewhere useful. But then you sit down and start making something. And the hours disappear. And you look up and it's 3AM and you're not even tired because you're completely in it. Completely alive.</p>
+      <p>
+        It doesn't feel powerful at the time. It feels like redirecting. Taking something that hurt and pointing it somewhere useful. But then you sit down and start making something. And the hours disappear. And you look up and it's 3AM and you're not even tired because you're completely in it. Completely alive.
+      </p>
 
-      <p>That's when I knew this wasn't just something to do.</p>
+      <p>
+        That's when I knew this wasn't just something to do.
+      </p>
 
-      <p>This was something I was made to do.</p>
+      <p>
+        This was something I was made to do.
+      </p>
 
-      <p>I will go back and start over, again and again, until it feels right. Not because I have to. Because anything less just isn't me. People call that extra. I call it standards. And when it finally comes together, when I look at the finished product and it's everything I imagined?</p>
+      <p>
+        Starting a business from nothing is not glamorous. Nobody tells you that. They show you the aesthetic workspace and the pretty packaging and the "how I quit my 9 to 5" videos. They do not show you the nights where you almost talked yourself out of it. The moments where you wondered if anyone would even care. The weeks where you put in the work and heard nothing back.
+      </p>
 
-      <p>Proud mom. Every single time. 🤍</p>
+      <p>
+        What kept me going was not confidence. It was the feeling I got when I was actually doing it. When I was in it. That told me everything I needed to know.
+      </p>
+
+      <p>
+        I will go back and start over, again and again, until it feels right. Not because I have to. Because anything less just isn't me. People call that extra. I call it standards. And when it finally comes together, when I look at the finished product and it's everything I imagined?
+      </p>
+
+      <p>
+        Proud mom. Every single time. 🤍
+      </p>
+
+      <h2>For the women still searching.</h2>
+
+      <p>
+        If you are trying to figure out how to start a business with no money, no connections, and no clear plan, I want you to know: that is exactly how most real ones begin. Not with a big launch or a perfect brand. With one thing you made. One person who saw it. One moment where something clicked.
+      </p>
+
+      <p>
+        The women I know who built something real did not wait until they were ready. They started in the middle of the mess. With limited resources, with self-doubt, with a full schedule that barely had room for a side project. They started anyway. And they figured it out as they went.
+      </p>
+
+      <p>
+        That is not a strategy. That is what building something from scratch actually looks like.
+      </p>
 
       <h2>Where I am now.</h2>
 
-      <p>And just so you know, this did not stay easy. Life filled up fast. Other responsibilities, other commitments, a schedule that left little room. But I kept showing up for it anyway. In the margins, in the stolen hours, in between everything else. And somehow those moments became the most intentional thing I have ever done.</p>
+      <p>
+        And just so you know, this did not stay easy. Life filled up fast. Other responsibilities, other commitments, a schedule that left little room. But I kept showing up for it anyway. In the margins, in the stolen hours, in between everything else. And somehow those moments became the most intentional thing I have ever done.
+      </p>
 
-      <p>Still building. Still learning. But I have the right people around me now, people who see the vision even when I can't. And for the first time I am allowing myself to dream bigger than I ever thought I was allowed to.</p>
+      <p>
+        Still building. Still learning. But I have the right people around me now, people who see the vision even when I can't. And for the first time I am allowing myself to dream bigger than I ever thought I was allowed to.
+      </p>
 
-      <p>Not because everything is perfect. But because I finally understand: the things that were meant to break you sometimes just redirect you.</p>
+      <p>
+        Not because everything is perfect. But because I finally understand: the things that were meant to break you sometimes just redirect you.
+      </p>
 
-      <p>And honestly? That redirection was the best thing that ever happened to me. 😌</p>
+      <p>
+        And that redirection was the best thing everr. 😌
+      </p>
 
-      <p>I'm so glad I finally found something I genuinely love. Something that came to me in one of the lowest moments of my life and turned into an extra income doing exactly that. It was a search. A real one. But finding it the way I did makes it mean so much more. I cannot wait for you all to hear everything that's coming. 🤍</p>
+      <p>
+        I'm so glad I finally found something I genuinely love. Something that came to me in one of the lowest moments of my life and turned into an extra income doing exactly that. It was a search. A real one. But finding it the way I did makes it mean so much more. I cannot wait for you all to hear everything that's coming. 🤍
+      </p>
 
     </div>
   </article>
